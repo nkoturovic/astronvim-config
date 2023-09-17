@@ -9,6 +9,7 @@ return {
     -- second key is the lefthand side of the map
     -- mappings seen under group name "Buffer"
     ["<leader>bn"] = { "<cmd>tabnew<cr>", desc = "New tab" },
+    ["<leader>ts"] = { ":SymbolsOutline<cr>", name = "SymbolsOutline" },
 --    ["<leader>bk"] = { "<cmd>bnext<cr>", desc = "Next tab" },
 --    ["<leader>bj"] = { "<cmd>bprevious<cr>", desc = "Previous tab" },
     ["<leader>bD"] = {

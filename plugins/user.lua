@@ -9,5 +9,28 @@ return {
       require("lsp_signature").setup()
     end,
   },
-  "LunarVim/darkplus.nvim"
+  "LunarVim/darkplus.nvim",
+  {
+    "simrat39/symbols-outline.nvim",
+    cmd = "SymbolsOutline",
+    -- keys = { { "<leader>ts", "<cmd>SymbolsOutline<cr>", desc = "Symbols Outline" } },
+    config = true,
+  },
+  { 
+    "p00f/clangd_extensions.nvim",
+     event = "BufRead",
+     config = function()
+       require("clangd_extensions").setup({
+        server = {},
+        extensions = {}
+      })
+     end
+  }, -- install lsp plugin
+  {
+    "iamcco/markdown-preview.nvim",
+    event = "BufRead",
+      config = function()
+        vim.fn["mkdp#util#install"]()
+      end,
+  },
 }

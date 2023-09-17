@@ -30,6 +30,17 @@ return {
   lsp = {
     -- customize lsp formatting options
     formatting = {
+       setup_handlers = {
+        -- add custom handler
+        clangd = function(_, opts) require("clangd_extensions").setup { server = opts } end
+      },
+       config = {
+        clangd = {
+          capabilities = {
+            offsetEncoding = "utf-8",
+          },
+        },
+      },
       -- control auto formatting on save
       format_on_save = {
         enabled = false, -- enable or disable format on save globally
@@ -52,7 +63,7 @@ return {
     },
     -- enable servers that you already have installed without mason
     servers = {
-      -- "pyright"
+	    "clangd",
     },
   },
 
@@ -82,5 +93,8 @@ return {
     --     ["~/%.config/foo/.*"] = "fooscript",
     --   },
     -- }
+    local notify = require "notify"
+       vim.notify = function(_,_,_)
+    end
   end,
 }
