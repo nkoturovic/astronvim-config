@@ -32,7 +32,7 @@ return {
     formatting = {
        setup_handlers = {
         -- add custom handler
-        clangd = function(_, opts) require("clangd_extensions").setup { server = opts } end
+        clangd = function(_, opts) require("clangd_extensions").setup { server = opts } end,
       },
        config = {
         clangd = {
@@ -89,6 +89,11 @@ return {
 		    vim.cmd(":set spell")
 	    end,
     })
+
+    -- vim.cmd("function OpenMarkdownPreview (url) \
+    --           execute \"silent ! firefox --new-instance \" . a:url \
+    --           endfunction \
+    --           let g:mkdp_browserfunc = 'OpenMarkdownPreview'")
 
     -- Set up custom filetypes
     -- vim.filetype.add {
