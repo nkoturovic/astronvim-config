@@ -12,6 +12,7 @@ return {
     ["<leader>ts"] = { ":SymbolsOutline<cr>", name = "SymbolsOutline" },
     -- ["<leader>T"] = { p = "<cmd>Telekasten panel<cr>", name = "Telekasten", desc = "Telekasten" },
     ["<leader>T"] = { ":TodoQuickFix<cr>", desc = "TODO Quick Fix" },
+    ["<leader>L"] = { ":Gen<cr>", desc = "LLM Gen" },
 --    ["<leader>bk"] = { "<cmd>bnext<cr>", desc = "Next tab" },
 --    ["<leader>bj"] = { "<cmd>bprevious<cr>", desc = "Previous tab" },
     ["<leader>bD"] = {
