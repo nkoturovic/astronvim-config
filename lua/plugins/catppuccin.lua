@@ -9,6 +9,11 @@ return {
           mantle = "#000000",
           crust = "#000000",
         },
+        latte = {
+          base = "#ffffff",
+          mantle = "#ffffff",
+          crust = "#ffffff",
+        },
       },
       --
       -- term_colors = true,
